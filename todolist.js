@@ -7,6 +7,13 @@ for (let i = 0; i <myNodelist .length; i++) {
     span.className = "close";
     span.appendChild(txt);
     myNodelist[i].appendChild(span);
+
+
+
+
+
+
+    
   }
     
   
