@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="todo.css">
-<head>
-    <div id="myDIV" class="header">
-        <h2 id="titre">My To Do List</h2>
-        <input type="text" id="myInput" placeholder="Title...">
-        <button onclick="todolist()"> cliquez</button>
-      
-   
-      
-      <p id="zonetest"></p> 
+    <link rel="stylesheet" href="todo.css">
+    <head>
+        <input type="text" id="nom" placeholder="Tapper le nom ici">
+        <input type="text" id="prenom" placeholder="Tapper le prénom ici">
+        <input type="text" id="age" placeholder="Tapper l'age ici">
+        <input type="button" onclick="insertableau()" value="Insert">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Age</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="montableau">
+            </tbody>
 
-<script>
-const todolist=[]
-let input=document.getElementById("myInput").value;
-todolist.push('input');
+        </table>
 
- 
+        <script src="todolist.js"></script>
 
-    
-</script> 
-
-</body>
+    </body>
 
 </html>
