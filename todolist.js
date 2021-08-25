@@ -14,6 +14,7 @@ function insertableau() {
 }
 
 function affiche() {
+    hideModifier();
     document.getElementById("montableau").innerHTML = ""
     user.forEach((value, i) => {
         document.getElementById("montableau").innerHTML += `<tr>
@@ -35,7 +36,6 @@ function affiche() {
 function supprimer(i) {
     user.splice(i, 1)
     affiche()
-    document.getElementById("isert").style.visibility="hidden";
 }
 
 function rest() {
@@ -45,6 +45,8 @@ function rest() {
 }
 
 function detaille(i){
+    showModifier()
+    hideInserer()  
     index=i
     const found = user[i]
     document.getElementById('nom').value=found.nom
@@ -53,6 +55,8 @@ function detaille(i){
 }
 
 function update(){
+    hideModifier()
+    showInserer()
     const updatedUser = {
         nom:document.getElementById('nom').value,
         prenom:document.getElementById('prenom').value,
@@ -63,3 +67,16 @@ function update(){
     affiche()
     rest()
 }   
+function hideModifier(){
+    document.getElementById("modif").style.visibility="hidden";
+}
+function hideInserer(){
+    document.getElementById("isert").style.visibility="hidden";
+}
+
+function showModifier(){
+    document.getElementById("modif").style.visibility="visible";
+}
+function showInserer(){
+    document.getElementById("isert").style.visibility="visible";
+}

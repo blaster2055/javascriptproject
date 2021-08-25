@@ -14,7 +14,7 @@
             referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="todo.css">
     </head>
-    <body>
+    <body onload="affiche()">
         <div class="container">
             <div class="row">
                 <div class="offset-3 col-sm-6">
@@ -36,8 +36,8 @@
                            <i class="fas fa-save"></i> Insert
                         </button>
                         <button type="button" onclick="update()" 
-                            class="btn
-                            btn-info text-white"> 
+                            class="btn 
+                            btn-info text-white" id="modif"> 
                             <i class="fas fa-save"></i> Modifier 
                         </button>
                         <button type="reset"  class="btn
