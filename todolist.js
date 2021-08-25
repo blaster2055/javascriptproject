@@ -21,8 +21,12 @@ function affiche() {
         <td>${value.prenom}</td>
         <td>${value.age}</td>
         <td>
-            <button onclick="supprimer(${i})">Supprimer</button>
-            <button onclick="detaille(${i})">Détails</button>
+            <button class="btn btn-danger" onclick="supprimer(${i})">
+                <i class="fas fa-trash"></i> Supprimer
+            </button>
+            <button  class="btn btn-info text-white" onclick="detaille(${i})">
+                <i class="fas fa-edit"></i> Détails
+            </button>
         </td>`
 
     })
@@ -31,6 +35,7 @@ function affiche() {
 function supprimer(i) {
     user.splice(i, 1)
     affiche()
+    document.getElementById("isert").style.visibility="hidden";
 }
 
 function rest() {
@@ -57,4 +62,4 @@ function update(){
     user.splice(index,1,updatedUser)
     affiche()
     rest()
-}
+}   

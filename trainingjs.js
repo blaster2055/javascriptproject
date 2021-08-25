@@ -1,21 +1,14 @@
+var mytab=[]
+function pusch(){
+var inputtext=document.getElementById('list').Value;
 
-let num1=8
-let num2=2
- document.getElementById('num1').textContent=num1
- document.getElementById('num2').textContent=num2
-let resul=document.getElementById('"result"')
-
-function addition(){
-   result.textContent= num1+num2
-  
+ mytab.push(inputtext)
+var text=""
+for(i=0;i<mytab.length;i++){
+   text=text+mytab[i]
 }
 
-function soustraction(){
-    result.textContent=num1-num2
-}
-function multiplication(){
-   result.textContent= num1*num2
-}
-function devition(){
-   result.textContent= num1/num2
+document.getElementById('unetache').innerHTML=text
+
+
 }
